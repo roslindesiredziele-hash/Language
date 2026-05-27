@@ -1,0 +1,13 @@
+# Build output
+x64/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.log
+*.tlog
+
+# Visual Studio junk
+*.user
+*.VC.db
+*.VC.opendb
