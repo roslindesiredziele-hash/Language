@@ -2,6 +2,8 @@
 
 A C++ project demonstrating core **Object-Oriented Programming (OOP)** principles through the modeling of natural and programming languages. The system uses inheritance, polymorphism, abstraction, and method overriding to simulate how different types of languages evolve over time.
 
+---
+
 ## Features
 
 - Inheritance
@@ -11,6 +13,11 @@ A C++ project demonstrating core **Object-Oriented Programming (OOP)** principle
 - Method Overriding
 - Virtual Functions
 - Unit Testing with Catch2
+- CMake Build System
+- CTest Integration
+- GitHub Actions Continuous Integration
+
+---
 
 ## Class Hierarchy
 
@@ -25,6 +32,8 @@ Language
     ├── CppLanguage
     └── PythonLanguage
 ```
+
+---
 
 ## Implemented Classes
 
@@ -41,17 +50,19 @@ public:
 };
 ```
 
+---
+
 ### NaturalLanguage
 
 Represents human languages.
 
-Features:
+#### Features
 
 - Vocabulary management
 - Slang management
 - Vocabulary growth through evolution
 
-Methods:
+#### Methods
 
 ```cpp
 addWord()
@@ -60,6 +71,8 @@ getVocabulary()
 getSlangTerms()
 getVocabularySize()
 ```
+
+---
 
 ### English
 
@@ -71,6 +84,8 @@ Evolution introduces:
 Yep
 ```
 
+---
+
 ### FrenchLanguage
 
 Derived from `NaturalLanguage`.
@@ -81,27 +96,31 @@ Evolution introduces:
 chelou
 ```
 
+---
+
 ### ProgrammingLanguage
 
 Represents programming languages.
 
-Features:
+#### Features
 
 - Version tracking
 - Feature tracking
 
-Methods:
+#### Methods
 
 ```cpp
 getVersion()
 getFeatures()
 ```
 
+---
+
 ### CppLanguage
 
 Derived from `ProgrammingLanguage`.
 
-Properties:
+#### Properties
 
 | Property | Value |
 |-----------|---------|
@@ -120,6 +139,8 @@ Evolution introduces:
 C++23 modules
 ```
 
+---
+
 ### PythonLanguage
 
 Derived from `ProgrammingLanguage`.
@@ -129,6 +150,8 @@ Evolution introduces:
 ```text
 Python 3.12
 ```
+
+---
 
 ## Example
 
@@ -148,6 +171,27 @@ Output:
 C++23 modules
 ```
 
+---
+
+## Design Notes
+
+### Evolution Model
+
+Natural and programming languages evolve differently:
+
+- Natural languages gain vocabulary and slang terms.
+- Programming languages gain versions and language features.
+
+### Runtime Polymorphism
+
+Objects can be manipulated through `Language*` pointers while executing the correct derived implementation of `evolve()`.
+
+### Object-Oriented Design
+
+The project uses inheritance to share common behavior while allowing each derived language type to implement its own evolution strategy through method overriding.
+
+---
+
 ## Testing
 
 The project uses **Catch2** for automated unit testing.
@@ -163,39 +207,85 @@ Coverage includes:
 - Slang management
 - Derived-class behavior
 
-Current test results:
+Current results:
 
 ```text
-All tests passed (61 assertions in 10 test cases)
+All tests passed
+61 assertions
+10 test cases
 ```
+
+---
+
+## Continuous Integration
+
+The project uses **GitHub Actions** for automated continuous integration.
+
+Every push and pull request automatically:
+
+1. Configures the project with CMake
+2. Builds the test suite
+3. Runs all Catch2 tests through CTest
+
+Current CI status:
+
+```text
+Build: Passing
+Tests: Passing
+```
+
+---
 
 ## Requirements
 
 - C++17 compatible compiler
-  - g++ 17+
-  - Clang 17+
-  - MSVC (Visual Studio 2022)
+- CMake 3.10+
 - Catch2 Single Header (`external/catch.hpp`)
+
+Supported compilers:
+
+- GNU g++
+- Clang
+- Microsoft Visual Studio (MSVC)
+
+---
 
 ## Build and Run
 
-Clone the repository:
+### Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/Language.git
 cd Language
 ```
 
-Compile the test suite:
+### Configure
 
 ```bash
-g++ -std=c++17 -Wall -Wextra -pedantic tests/test_language.cpp -o test_language
+mkdir build
+cd build
+
+cmake ..
 ```
 
-Run the tests:
+### Build
 
 ```bash
-./test_language
+cmake --build .
+```
+
+### Run Tests
+
+Linux/macOS:
+
+```bash
+ctest --verbose
+```
+
+Visual Studio:
+
+```bash
+ctest -C Debug --verbose
 ```
 
 Expected output:
@@ -205,10 +295,17 @@ Expected output:
 All tests passed (61 assertions in 10 test cases)
 ```
 
+---
+
 ## Project Structure
 
 ```text
 Language/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
 ├── external/
 │   └── catch.hpp
 │
@@ -224,8 +321,12 @@ Language/
 ├── tests/
 │   └── test_language.cpp
 │
+├── CMakeLists.txt
+│
 └── README.md
 ```
+
+---
 
 ## OOP Principles Demonstrated
 
@@ -249,17 +350,36 @@ Language state is maintained internally and accessed through public member funct
 
 Derived classes customize their evolution behavior while reusing functionality from parent classes.
 
+---
+
 ## Technologies
 
 - C++17
 - Catch2
-- GNU g++
+- CMake
+- CTest
+- GitHub Actions
 - Git
 - GitHub
+- GNU g++
+
+---
+
+## Future Improvements
+
+Potential future extensions:
+
+- More natural language types
+- More programming language types
+- Additional language evolution rules
+- UML diagrams
+- Demonstration application
+
+---
 
 ## Author
 
 Desire Roslin Dziele
 
-University of Lodz  
-B.Sc. Computer Science
+Computer Science Student  
+University of Łódź
