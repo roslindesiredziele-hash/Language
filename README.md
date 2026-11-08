@@ -177,7 +177,7 @@ All tests passed (61 assertions in 10 test cases)
   - MSVC (Visual Studio 2022)
 - Catch2 Single Header (`external/catch.hpp`)
 
-## Installation
+## Build and Run
 
 Clone the repository:
 
