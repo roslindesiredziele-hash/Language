@@ -1,2 +1,2 @@
-LanguageTests 1 0.178072
+LanguageTests 2 0.032328
 ---
