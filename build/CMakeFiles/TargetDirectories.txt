@@ -1,0 +1,4 @@
+C:/MyPROJECTS/Language-Evolution-Simulator/build/CMakeFiles/test_language.dir
+C:/MyPROJECTS/Language-Evolution-Simulator/build/CMakeFiles/RUN_TESTS.dir
+C:/MyPROJECTS/Language-Evolution-Simulator/build/CMakeFiles/ALL_BUILD.dir
+C:/MyPROJECTS/Language-Evolution-Simulator/build/CMakeFiles/ZERO_CHECK.dir
