@@ -8,6 +8,31 @@ x64/
 *.tlog
 *.test_language.exe
 
+# Build directories
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+cmake_install.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# Binaries
+*.exe
+*.out
+*.obj
+*.o
+*.pdb
+*.ilk
+
 # Visual Studio junk
 .vscode/
 *.user
