@@ -1,6 +1,39 @@
 # Language Evolution Simulator
 
-A C++ project demonstrating core **Object-Oriented Programming (OOP)** principles through the modeling of natural and programming languages. The system uses inheritance, polymorphism, abstraction, and method overriding to simulate how different types of languages evolve over time.
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Class Hierarchy](#class-hierarchy)
+- [Implemented Classes](#implemented-classes)
+- [Example](#example)
+- [Design Notes](#design-notes)
+- [Testing](#testing)
+- [Continuous Integration](#continuous-integration)
+- [Requirements](#requirements)
+- [Build and Run](#build-and-run)
+- [Project Structure](#project-structure)
+- [OOP Principles Demonstrated](#oop-principles-demonstrated)
+- [Technologies](#technologies)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
+
+---
+
+## Project Overview
+
+Language Evolution Simulator is a C++ project designed to demonstrate core Object-Oriented Programming principles through the modelling of natural and programming languages.
+
+The project implements an inheritance hierarchy rooted in an abstract `Language` base class and explores concepts such as abstraction, inheritance, polymorphism, virtual dispatch, method overriding, and encapsulation.
+
+Beyond OOP concepts, the repository demonstrates modern software engineering practices through:
+
+- Automated testing with Catch2
+- Build automation with CMake
+- Test orchestration with CTest
+- Continuous Integration with GitHub Actions
+
+The goal is to provide a practical example of how object-oriented design can be used to model related concepts while remaining maintainable, extensible, and testable.
 
 ---
 
@@ -12,7 +45,7 @@ A C++ project demonstrating core **Object-Oriented Programming (OOP)** principle
 - Encapsulation
 - Method Overriding
 - Virtual Functions
-- Unit Testing with Catch2
+- Automated Testing with Catch2
 - CMake Build System
 - CTest Integration
 - GitHub Actions Continuous Integration
@@ -196,42 +229,35 @@ The project uses inheritance to share common behavior while allowing each derive
 
 The project uses **Catch2** for automated unit testing.
 
-Coverage includes:
+### Coverage
 
-- Language evolution
-- Inheritance
-- Runtime polymorphism
-- Version tracking
-- Feature tracking
-- Vocabulary management
-- Slang management
-- Derived-class behavior
+✅ Language evolution  
+✅ Inheritance  
+✅ Runtime polymorphism  
+✅ Version tracking  
+✅ Feature tracking  
+✅ Vocabulary management  
+✅ Slang management  
+✅ Derived-class behavior  
+✅ Base-class pointer interaction  
+✅ Multiple evolution scenarios  
 
-Current results:
+### Current Results
 
-```text
-All tests passed
-61 assertions
-10 test cases
-```
+pull request automatically:
 
----
+1. Configures the project using CMake
+2. Builds the test executable
+3. Executes the Catch2 test suite through CTest
 
-## Continuous Integration
-
-The project uses **GitHub Actions** for automated continuous integration.
-
-Every push and pull request automatically:
-
-1. Configures the project with CMake
-2. Builds the test suite
-3. Runs all Catch2 tests through CTest
-
-Current CI status:
+Current CI Status:
 
 ```text
 Build: Passing
 Tests: Passing
+10 test cases
+61 assertions
+100% passing
 ```
 
 ---
@@ -291,7 +317,6 @@ ctest -C Debug --verbose
 Expected output:
 
 ```text
-===============================================================================
 All tests passed (61 assertions in 10 test cases)
 ```
 
@@ -367,19 +392,18 @@ Derived classes customize their evolution behavior while reusing functionality f
 
 ## Future Improvements
 
-Potential future extensions:
+Potential future extensions include:
 
-- More natural language types
-- More programming language types
-- Additional language evolution rules
+- Additional natural language types
+- Additional programming language types
+- More sophisticated evolution rules
 - UML diagrams
-- Demonstration application
+- Interactive demonstration application
 
 ---
 
 ## Author
 
-Desire Roslin Dziele
-
+**Desire Roslin Dziele**  
 Computer Science Student  
 University of Łódź
