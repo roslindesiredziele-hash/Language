@@ -9,34 +9,6 @@
 #include "../src/PythonLanguage.hpp"
 #include <iostream>
 
-TEST_CASE("Language base class has evolve() method") 
-{   
-    REQUIRE(true);
-}
-
-TEST_CASE("NaturalLanguage class inherits from Language")
-{
-    NaturalLanguage* ptr = nullptr;
-    REQUIRE(true);
-}
-
-TEST_CASE("ProgrammingLanguage class inherits from Language") 
-{
-    REQUIRE(true);
-}
-
-TEST_CASE("English is a concrete NaturalLanguage")
-{
-    English e;
-    REQUIRE(true);
-}
-
-TEST_CASE("CppLanguage is a concrete ProgrammingLanguage")
-{
-    CppLanguage cpp;
-    REQUIRE(true);
-}
-
 TEST_CASE("CppLanguage has a name")
 {
     CppLanguage cpp;
