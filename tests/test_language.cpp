@@ -132,10 +132,18 @@ TEST_CASE("English and French language behavior")
 
     REQUIRE(english.getSlangTerms().size() == 1);
     CHECK(english.getSlangTerms()[0] == "Yep");
+
+    REQUIRE(english.getVocabulary().size() == 1);
+    CHECK(english.getVocabulary()[0] == "New_word");
+
     CHECK(english.getVocabularySize() == 1);
 
     REQUIRE(french.getSlangTerms().size() == 1);
     CHECK(french.getSlangTerms()[0] == "chelou");
+
+    REQUIRE(french.getVocabulary().size() == 1);
+    CHECK(french.getVocabulary()[0] == "New_word");
+
     CHECK(french.getVocabularySize() == 1);
 
     english.addWord("amazing");
@@ -144,8 +152,11 @@ TEST_CASE("English and French language behavior")
     CHECK(english.getVocabularySize() == 2);
     CHECK(french.getVocabularySize() == 2);
 
-    CHECK(english.getVocabulary().back() == "amazing");
-    CHECK(french.getVocabulary().back() == "remarquable");
+    REQUIRE(english.getVocabulary().size() == 2);
+    CHECK(english.getVocabulary()[1] == "amazing");
+
+    REQUIRE(french.getVocabulary().size() == 2);
+    CHECK(french.getVocabulary()[1] == "remarquable");
 }
 
 TEST_CASE("Language polymorphism works")
