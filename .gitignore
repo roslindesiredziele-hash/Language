@@ -6,8 +6,10 @@ x64/
 *.ilk
 *.log
 *.tlog
+*.test_language.exe
 
 # Visual Studio junk
+.vscode/
 *.user
 *.VC.db
 *.VC.opendb
